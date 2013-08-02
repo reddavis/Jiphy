@@ -2,20 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Jiphy</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="stylesheets/style.css">
+    
+    
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
     <script src="//use.typekit.net/hqj1qal.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
-    <h1>Jiphy</h1>
-    <!-- Add your site or application content here -->
+    <div class="bg">
+      <ul class="nav nav--social">
+        <li>
+          <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </li>
+      </ul>
+      
+      <div class="l-constrained">
+        <div class="hero text-center">
+          <h1>Jiphy</h1>
+          <p>Browse the latest GIF's, save your favorites and easily share them with friends. Powered by the GIF search engine <a href="http://giphy.com">Giphy.com</a>.</p>
+        </div>
+      </div>
+          
+      <div class="iphone test"></div>
+    </div>
+    
+    <footer class="l-footer text-center">
+      <div class="l-constrained">
+        <small><a href="mail:me@red.to">me@red.to</a></small>
+      </div>
+    </footer>
+        
     <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
     <script>window.Zepto || document.write('<script src="javascript/vendor/zepto.min.js"><\/script>')</script>
     <script src="javascript/plugins.js"></script>
     <script src="javascript/main.js"></script>
+    
   </body>
 </html>
