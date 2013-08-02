@@ -350,7 +350,7 @@ h1,
   position: relative; }
   h1:after,
   .alpha:after {
-    background-color: #1a1a1a;
+    background-color: #333333;
     height: 4px;
     content: '';
     margin-left: -5%;
@@ -487,7 +487,7 @@ h1,
     .hero {
       padding-top: 8.75rem; } }
 
-.test {
+.iphone {
   -webkit-animation-name: fade-slide-up;
   animation-name: fade-slide-up;
   -webkit-animation-duration: .6s;
@@ -501,9 +501,7 @@ h1,
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-
-.iphone {
+  animation-fill-mode: both;
   background-image: url(../images/iphone.png);
   background-repeat: no-repeat;
   background-size: cover;

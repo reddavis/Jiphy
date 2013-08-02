@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Jiphy</title>
+    <title>Jiphy • Coming soon for iPhone and iPad</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -31,6 +31,9 @@
           </script>
         <!-- /Hammer reload -->
       
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src='javascript/vendor/cycle2.min.js'></script>
+<script src='javascript/main.js'></script>
     <script src="//use.typekit.net/hqj1qal.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
   </head>
@@ -50,7 +53,17 @@
         </div>
       </div>
           
-      <div class="iphone test"></div>
+      <div class="iphone">
+        <ul class="l-grid cycle-slideshow"
+          data-cycle-fx="fade"
+          data-cycle-speed="800"
+          data-cycle-slides="li"
+          >
+          <li><img src="images/screenshots/screenshot-1.png" alt=""></li>
+          <li><img src="images/screenshots/screenshot-2.png" alt=""></li>
+          <li><img src="images/screenshots/screenshot-3.png" alt=""></li>
+        </ul>
+      </div>
     </div>
     
     <footer class="l-footer text-center">
