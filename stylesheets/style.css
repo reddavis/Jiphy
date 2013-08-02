@@ -458,6 +458,9 @@ h1,
 
 .bg {
   background-color: #f5f5f5;
+  background-image: -webkit-linear-gradient(-90deg, white, #ebebeb);
+  background-image: -moz-linear-gradient(-90deg, white, #ebebeb);
+  background-image: linear, -90deg, white, #ebebeb;
   padding-bottom: 6.25rem;
   position: relative; }
   @media only screen and (min-width: 35em) {
