@@ -6,48 +6,32 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <link rel='stylesheet' href='stylesheets/style.css'>
+    <link rel='stylesheet' href='f3db35ea19b948c5069c6e8e023ef8ac.css'>
     
     
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src='javascript/vendor/cycle2.min.js'></script>
+    <script src='e573effeeef08bd986c2e3d7bc69d152.js'></script>
     <script src="//use.typekit.net/hqj1qal.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
     <div class="bg">
       <ul class="nav nav--social">
-        <li>
-          <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <li class="cta cta--a">
+          <div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-size="large">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          </div>
+        </li>
+        
+        <li class="cta cta--b">
+          <a href="https://itunes.apple.com/gb/app/jiphy/id680383028?mt=8"><div class="app"></div></a>
         </li>
       </ul>
       
       <div class="l-constrained">
         <div class="hero text-center">
-          <h1>Jiphy</h1>
+          <h1><span class="del">G</span>JIPHY</h1>
           <p>Browse the latest GIF's, save your favorites and easily share them with friends. Powered by the GIF search engine <a href="http://giphy.com">Giphy.com</a>.</p>
         </div>
       </div>
@@ -55,7 +39,7 @@
       <div class="iphone">
         <ul class="l-grid cycle-slideshow"
           data-cycle-fx="fade"
-          data-cycle-speed="800"
+          data-cycle-speed="1000"
           data-cycle-slides="li"
           >
           <li><img src="images/screenshots/screenshot-1.png" alt=""></li>
