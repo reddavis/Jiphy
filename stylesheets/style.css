@@ -411,6 +411,7 @@ body {
   text-shadow: none; }
 
 img {
+  max-width: 100%;
   vertical-align: middle; }
 
 .del {
@@ -545,7 +546,7 @@ h1,
   background-image: url(../images/iphone.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 16.875rem;
+  height: 16.375rem;
   margin-top: 1.25rem;
   margin-right: auto;
   margin-left: auto;
