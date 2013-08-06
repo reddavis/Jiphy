@@ -350,13 +350,17 @@ h1,
   h1:after,
   .alpha:after {
     background-color: #333333;
-    height: 4px;
+    height: 2px;
     content: '';
     margin-left: -5%;
     position: absolute;
     bottom: 0;
     left: 50%;
     width: 10%; }
+    @media only screen and (min-width: 35em) {
+      h1:after,
+      .alpha:after {
+        height: 4px; } }
   @media only screen and (min-width: 35em) {
     h1,
     .alpha {
@@ -420,13 +424,20 @@ img {
     background-color: #333333;
     content: '';
     display: block;
-    height: 4px;
-    margin-top: -2px;
+    height: 2px;
+    margin-top: -1px;
     position: absolute;
     top: 50%;
-    left: -15px;
+    left: -10px;
     -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     width: 150%; }
+    @media only screen and (min-width: 35em) {
+      .del:after {
+        height: 4px;
+        margin-top: -2px;
+        left: -15px;
+        width: 150%; } }
 
 a {
   color: inherit;
@@ -493,20 +504,19 @@ h1,
     .bg {
       padding-bottom: 7.5rem; } }
 
-.cta {
-  position: absolute; }
+@media only screen and (min-width: 35em) {
+  .cta {
+    position: absolute; } }
 
 .cta--a {
-  left: 1rem; }
+  margin-bottom: 1.25rem; }
   @media only screen and (min-width: 35em) {
     .cta--a {
       left: 1.375rem; } }
 
-.cta--b {
-  right: 1rem; }
-  @media only screen and (min-width: 35em) {
-    .cta--b {
-      right: 1.375rem; } }
+@media only screen and (min-width: 35em) {
+  .cta--b {
+    right: 1.375rem; } }
 
 .hero {
   -webkit-animation-name: fade-slide-down;
@@ -523,7 +533,7 @@ h1,
   animation-direction: alternate;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  padding-top: 6.25rem; }
+  padding-top: 3.125rem; }
   @media only screen and (min-width: 35em) {
     .hero {
       padding-top: 8.75rem; } }
@@ -590,19 +600,21 @@ h1,
  * The nav module displays list inline.
 */
 .nav > li {
-  display: inline-block; }
+  display: block; }
 .nav a {
   display: inline-block; }
 
 .nav--social {
   font-size: 0;
-  height: 3.75rem;
-  position: fixed;
-  top: 1rem;
+  padding-top: 1.375rem;
   width: 100%; }
   @media only screen and (min-width: 35em) {
     .nav--social {
-      top: 1.375rem; } }
+      height: 3.75rem;
+      padding-top: 0;
+      position: fixed;
+      top: 1.375rem;
+      z-index: 2; } }
 
 @-webkit-keyframes fade-slide-down {
   from {
